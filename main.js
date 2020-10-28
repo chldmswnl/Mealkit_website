@@ -2,7 +2,7 @@ const HTTP_PORT = process.env.PORT || 35491;
 const express = require("express");
 const exhbs = require("express-handlebars");
 const path = require("path");
-const data = require("./data");
+const data = require("./data.json");
 const bodyParser = require("body-parser");
 
 const app = express();
