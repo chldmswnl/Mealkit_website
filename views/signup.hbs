@@ -1,0 +1,25 @@
+<body>
+    <div class="modal">
+        <span class="modal_title">Sign Up</span>
+        <span class="modal_title2">Create your account by entering your email and choosing a password</span>
+        <form class="sign_form" method="POST" action="/signup">
+            <input type="text" placeholder="First Name" id="firstName" name="firstName" value="{{values.firstName}}">
+            {{#if validation.firstName}}
+                <span class="valid">{{validation.firstName}}</span>
+            {{/if}}
+            <input type="text" placeholder="Last Name" id="lastName" name="lastName" value="{{values.lastName}}">
+            {{#if validation.lastName}}
+                <span class="valid">{{validation.lastName}}</span>
+            {{/if}}
+            <input type="text" placeholder="Email Address" id="email" name="email" value="{{values.email}}">
+            {{#if validation.email}}
+                <span class="valid">{{validation.email}}</span>
+            {{/if}}
+            <input type="password" placeholder="Password" id="password" name="password" value="{{values.password}}">
+            {{#if validation.password}}
+                <span class="valid">{{validation.password}}</span>
+            {{/if}}
+            <input type="submit" class="signup_btn" value="Sign up today">
+        </form>
+    </div>
+</body>

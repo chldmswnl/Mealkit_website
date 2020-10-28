@@ -1,0 +1,42 @@
+
+<body>
+    <div class="asia_list">
+        <span class="list_title">Asia food</span>
+        <span class="list_desc">Enjoy asian food at your dinner table!</span>
+        <div class="meals">
+            {{#each data}}
+                {{#if isAsia}}
+                <div class="meal">
+                    <img src="{{img}}" alt="meal_img">
+                    <div class="meals_content">
+                        <span class="meal_title">{{title}}  <span class="meal_ingre">{{included}}</span></span>
+                        <span class="meal_price">{{price}}</span>
+                    </div>
+                </div>
+                {{/if}}
+            {{/each}}
+        
+        </div>
+       
+    </div>
+    <div>
+    <div class="western_list">
+        <span class="list_title">Western food</span>
+        <span class="list_desc">Enjoy western food at your dinner table! </span>
+        <div class="meals">
+        {{#each data}}
+           {{#if isWestern}}
+            <div class="meal">
+                <img src="{{img}}" alt="meal_img">
+                <div class="meals_content">
+                    <span class="meal_title">{{title}}  <span class="meal_ingre">{{included}}</span></span>
+                    <span class="meal_price">{{price}}</span>
+                </div>
+            </div>
+          {{/if}} 
+        {{/each}}
+        </div>
+    </div>
+    </div>
+
+</body>

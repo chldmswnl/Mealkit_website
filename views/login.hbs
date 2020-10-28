@@ -1,0 +1,16 @@
+<body>
+    <div class="modal_login">
+        <span class="modal_title">Welcome Back</span>
+        <form class="login_form" method="POST" action="/login">
+            <input type="text" placeholder="Email address" id="email" name="email" value="{{values.email}}">
+            {{#if validation.email}}
+                <span class="valid">{{validation.email}}</span>
+            {{/if}}
+            <input type="text" placeholder="Password" id="password" name="password" value="{{values.password}}">
+            {{#if validation.password}}
+                <span class="valid">{{validation.password}}</span>
+            {{/if}}
+            <input type="submit" class="login_btn" value="Log in">
+        </form>
+    </div>  
+</body>
