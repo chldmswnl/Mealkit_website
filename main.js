@@ -16,7 +16,7 @@ function onHttpstart(){
 
 app.engine(".hbs",exhbs({extname: ".hbs"}));
 app.set("view engine",".hbs");
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('views/img')); 
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -70,7 +70,8 @@ app.post('/login',(req,res)=>{
 
 app.get('/signup',(req,res)=>{
     res.render('signup',{
-
+        validation: {},
+        values: {}
     });
 });
 
