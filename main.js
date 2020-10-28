@@ -6,7 +6,7 @@ const path=require('path');
 const data=require('./data.json');
 const bodyParser=require('body-parser');
 
-
+console.log("data loaded")
 
 const app=express();
 
@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/',(req,res)=>{
-        
+        console.log("root route")
     res.render('home',{
         data:data.meals,
     });
