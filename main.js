@@ -2,7 +2,7 @@ const HTTP_PORT = 35491;
 const express = require("express");
 const exhbs = require("express-handlebars");
 const path = require("path");
-const data = require("./data.json");
+const data = require("./data");
 const bodyParser = require("body-parser");
 
 console.log("data loaded");
@@ -11,7 +11,7 @@ const app = express();
 
 app.engine(".hbs", exhbs({ extname: ".hbs" }));
 app.set("view engine", ".hbs");
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(__dirname + "/" + "public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 console.log("middlewares setup");
