@@ -33,6 +33,7 @@ router.post("/", (req, res) => {
   const message1 = `Welcome ${firstName} !`;
   let validation = {};
   let passed = true;
+  let errors = [];
 
   if (!firstName || firstName.length < 2 || firstName.length > 20) {
     passed = false;
@@ -97,7 +98,10 @@ router.post("/", (req, res) => {
       })
       .catch((err) => {
         console.log("Error");
-        console.log(err);
+        errors.push("Sorry, This email is already registered");
+        res.render("user/signup", {
+          errors,
+        });
       });
   } else {
     res.render("user/signup", {

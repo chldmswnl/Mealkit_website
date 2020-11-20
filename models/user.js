@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
   firstName: { type: String, required: true },
   lastName: { type: String, requried: true },
-  email: { type: String, unique: true, required: true, sparse: true },
+  email: { type: String, unique: true, required: true },
   password: { type: String, required: true },
   usertype: { type: String, required: true },
 });
@@ -36,5 +36,5 @@ userSchema.pre("save", function (next) {
 });
 
 // model & export
-var User = mongoose.model("user", userSchema);
+const User = mongoose.model("user", userSchema);
 module.exports = User;

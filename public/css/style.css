@@ -108,6 +108,14 @@ body {
   font-weight: bold;
   padding-bottom: 15px;
 }
+
+.modal .error {
+  color: red;
+  font-size: 13px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
 .modal_title {
   color: #268211;
   font-weight: bold;

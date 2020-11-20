@@ -8,6 +8,7 @@
         <div class="pop_ups">
             {{#if user}}
                 <span class="nav_greeting">Hello {{user.firstName}} {{user.lastName}}!</span>
+                <a href="userDash">Board</a>
                 <a href="login/logout">Logout</a>
             {{else}}
                 <a class="login_btn" href="/login">Log In</a>

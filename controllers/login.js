@@ -8,10 +8,6 @@ router.get("/", (req, res) => {
   res.render("user/login", {});
 });
 
-router.get("/userDash", (req, res) => {
-  res.render("user/userDash");
-});
-
 router.post("/", (req, res) => {
   const { email, password } = req.body;
   let validation = {};

@@ -2,6 +2,9 @@
     <div class="modal">
         <span class="modal_title">Sign Up</span>
         <span class="modal_title2">Create your account by entering your email and choosing a password</span>
+         {{#each errors}}
+            <p class="error">{{this}}</p>
+        {{/each}}
         <form class="sign_form" method="POST" action="/signup">
             <input type="text" placeholder="First Name" id="firstName" name="firstName" value="{{values.firstName}}">
             {{#if validation.firstName}}
