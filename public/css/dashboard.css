@@ -1,70 +1,85 @@
-.dashboard
-{
-    width:100%;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
 }
 
-.dash_title1
-{
-    color:#268211;
-    font-size:30px;
+.dash_title1 {
+  color: #268211;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.dash_title2 {
+  color: #696866;
+  font-size: 25px;
+}
+
+.dash_info {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.dashboard a,
+.welcome a {
+  color: #d9bd32;
+  font-weight: bold;
+  font-size: 20px;
+}
+.welcome {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dash {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 600px;
+}
+
+.dash .menu {
+  width: 15%;
+  background-color: #268211;
+}
+
+.dash img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 40px;
+}
+
+.dash .menus {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 720px) {
+  .dash_title1 {
+    color: #268211;
+    font-size: 20px;
     font-weight: bold;
-}
+  }
 
-.dash_title2
-{
-    color:#696866;
-    font-size:25px;
-}
+  .dash_title2 {
+    color: #696866;
+    font-size: 20px;
+  }
 
-.dash_info
-{
-    color:black;
+  .dash_info {
+    color: black;
     font-weight: bold;
-    font-size:20px;
-}
+    font-size: 15px;
+  }
 
-.dashboard a
-{
-   
+  .dashboard a {
     color: #d9bd32;
     font-weight: bold;
-    font-size: 20px;
-   
-}
-
-@media screen and (max-width:480px)
-{
-    .dash_title1
-    {
-        color:#268211;
-        font-size:25px;
-        font-weight: bold;
-    }
-
-    .dash_title2
-    {
-        color:#696866;
-        font-size:20px;
-    }
-
-    .dash_info
-    {
-        color:black;
-        font-weight: bold;
-        font-size:15px;
-    }
-
-    .dashboard a
-    {
-    
-        color: #d9bd32;
-        font-weight: bold;
-        font-size: 20px;
-    
-    }
+    font-size: 15px;
+  }
 }

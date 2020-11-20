@@ -19,6 +19,12 @@
             {{#if validation.password}}
                 <span class="valid">{{validation.password}}</span>
             {{/if}}
+            <div class="userType">
+                <input type="radio"  id="usertype" name="usertype" value="user" checked>
+                <span>User</span>
+                <input type="radio"  id="usertype" name="usertype" value="admin">
+                <span>Admin</span>
+            </div>
             <input type="submit" class="signup_btn" value="Sign up today">
         </form>
     </div>

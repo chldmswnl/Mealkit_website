@@ -6,9 +6,15 @@
             <a href="" class="menu">FAQ</a>
         </div>
         <div class="pop_ups">
-            <a class="login_btn" href="/login">Log In</a>
-            <a class="signup_btn" href="/signup">Sign Up</a>
+            {{#if user}}
+                <span class="nav_greeting">Hello {{user.firstName}} {{user.lastName}}!</span>
+                <a href="login/logout">Logout</a>
+            {{else}}
+                <a class="login_btn" href="/login">Log In</a>
+                <a class="signup_btn" href="/signup">Sign Up</a>
+            {{/if}}    
         </div>
+        
 </nav>
 <div class="img_section">
         <img src="/img/20190218151513341_0.jpg" alt="main_img">
