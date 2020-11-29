@@ -1,0 +1,68 @@
+<body>
+    <div class="createMeal">
+        <span class="create_title">Edit Meal Kit</span>
+        <form class="createMeal_form" method="POST" action="/clerkDash/editmeal/{{values._id}}" enctype="multipart/form-data">
+            <ul>
+                <li>
+                    <label for="kit_title">Meal kit title</label>
+                    <input type="text"  id="title" name="title" value="{{values.title}}">
+                </li>
+                <li>
+                    <label for="kit_included">What is included?</label>
+                    <input type="text"  id="included" name="included" value="{{values.included}}">
+                </li>
+                <li>
+                    <label for="kit_desc">Description</label>
+                    <textarea  id="desc" name="desc">{{values.desc}}</textarea>
+                </li>
+                <li>
+                    <label for="mealType">Meal type</label>
+                    <div class="mealType">
+                        <input type="radio"  id="mealtype" name="mealtype" value="asia">
+                        <span>Asia</span>
+                        <input type="radio"  id="mealtype" name="mealtype" value="western">
+                        <span>Western</span>
+                    </div>
+                </li>
+                <li>
+                    <label for="kit_price">Price</label>
+                    <input type="text"  id="kit_price" name="kit_price" value="{{values.price}}">
+                </li>
+                <li>
+                    <label for="kit_time">Cooking time (min) </label>
+                    <input type="number"  id="kit_time" name="kit_time" value="{{values.cookingTime}}">
+                </li>
+                <li>
+                    <label for="kit_serving">How many people can eat?</label>
+                    <input type="text"  id="kit_serving" name="kit_serving" value="{{values.serving}}">
+                </li>
+                <li>
+                    <label for="kit_calories">Calories per serving</label>
+                    <input type="number"  id="kit_calories" name="kit_calories" value="{{values.calroriesPerServing}}">
+                </li>
+                <li>
+                    <label for="top">Is this meal kit top meal?</label>
+                    <div class="mealType">
+                        
+                         <input type="radio"  id="top" name="top" value="Yes">
+                         <span>Yes</span>
+                         <input type="radio"  id="top" name="top" value="No">
+                         <span>No</span>
+                       
+                        
+                    </div>
+                </li>
+                <li>
+                    <label for="kit_picture">Picture</label>
+                    <input type="file" id="kit_picture" name="kit_picture" accept="image/*" >
+                </li>
+                <li>
+                    <img src="/uploads/{{values.img}}" alt="img" class="edit_img">
+                </li>
+                <li>
+                    <input type="submit" class="createmeal_btn" value="EDIT">
+                </li>
+            </ul>
+        </form>
+    </div>
+</body>

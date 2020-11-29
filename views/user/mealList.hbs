@@ -1,0 +1,26 @@
+<div class="meal_list">
+        <span class="list_title">Edit meal kit</span>
+        <div class="list">
+            {{#each data}}
+                <div class="oneMeal">
+                    <div class="meallist_img">
+                        <img src="/uploads/{{img}}" alt="meallist_img" class="meallist_img">
+                    </div>
+                    <div class="meallist_content">
+                        <span class="meallist_title">{{title}}  <span class="meallist_ingre">{{included}}</span></span><br>
+                        <span class="meallist_price">Price :{{price}}</span><br>
+                        <span class="meallist_cate">Category: {{category}}</span><br>
+                        {{#if topmeal}}
+                        <span class="meallist_cate">Top meal: Yes</span>
+                        {{else}}
+                        <span class="meallist_cate">Top meal: No</span>
+                        {{/if}}
+                        <div class="btns">
+                             <a href="/clerkDash/editmeal/{{_id}}" class="meal_edit">Edit</a>
+                        </div>
+    
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+</div>

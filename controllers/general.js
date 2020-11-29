@@ -1,18 +1,29 @@
 const express = require("express");
 const router = express.Router();
-const data = require("../data.json");
+const Meal = require("../models/meals");
 
 router.get("/", (req, res) => {
-  res.render("general/home", {
-    data: data.meals,
-    title: "Home Page",
-  });
+  Meal.find()
+    .exec()
+    .then((meal) => {
+      data = meal.map((value) => value.toObject());
+
+      res.render("general/home", {
+        data: data,
+        title: "Home Page",
+      });
+    });
 });
 
 router.get("/menu", (req, res) => {
-  res.render("general/menu", {
-    data: data.meals,
-  });
+  Meal.find()
+    .exec()
+    .then((meal) => {
+      data = meal.map((value) => value.toObject());
+      res.render("general/menu", {
+        data: data,
+      });
+    });
 });
 
 router.get("/userDash", (req, res) => {
@@ -20,14 +31,6 @@ router.get("/userDash", (req, res) => {
     res.redirect("/");
   } else {
     res.render("user/userDash");
-  }
-});
-
-router.get("/clerkDash", (req, res) => {
-  if (req.session.user == null) {
-    res.redirect("/");
-  } else {
-    res.render("user/clerkDash");
   }
 });
 

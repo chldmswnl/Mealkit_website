@@ -59,6 +59,129 @@
   margin-top: 20px;
 }
 
+.createMeal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.create_title {
+  margin-bottom: 30px;
+  color: #ff9705;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.createMeal ul {
+  list-style: none;
+}
+
+.createMeal ul li {
+  margin: 10px;
+}
+
+.createMeal ul li textarea {
+  height: 100px;
+  width: 200px;
+}
+
+.createMeal ul li label {
+  margin-right: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  width: 200px;
+  float: left;
+  text-align: right;
+}
+
+.mealType span {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.createmeal_btn {
+  margin-top: 20px;
+  width: 300px;
+  height: 35px;
+  background-color: #ff9705;
+  border: none;
+  font-weight: bold;
+  color: white;
+  margin-left: 80px;
+  cursor: pointer;
+}
+.meal_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.meallist_img {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+.oneMeal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.list_title {
+  margin: 30px;
+}
+
+.meallist_title {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.meallist_price,
+.meallist_cate {
+  font-weight: bold;
+  font-size: 13px;
+  color: gray;
+}
+
+.btns {
+  margin-top: 10px;
+}
+
+.btns a {
+  width: 100px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.edit_img {
+  width: 200px;
+  height: 200px;
+  margin-left: 150px;
+}
+
+.dash_btn {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.dash_btn a {
+  color: #ff9705;
+  text-decoration: none;
+}
+
+.btns a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #bd0927;
+  font-size: 13px;
+}
+
 @media screen and (max-width: 720px) {
   .dash_title1 {
     color: #268211;
@@ -77,9 +200,17 @@
     font-size: 15px;
   }
 
+  .dash_btn {
+    margin-left: 0;
+  }
+
   .dashboard a {
     color: #d9bd32;
     font-weight: bold;
     font-size: 15px;
+  }
+  .meallist_img {
+    width: 100px;
+    height: 100px;
   }
 }

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const data = require("../data.json");
+const data = require("../data");
 const User = require("../models/user");
 
 function validateEmail(email) {
@@ -74,7 +74,7 @@ router.post("/", (req, res) => {
                     Vistor's message: ${userSaved.message}<br>
                     `,
         };
-        user.updateOne({
+        User.updateOne({
           _id: userSaved._id,
         });
         // Asyncronously sends the email message.

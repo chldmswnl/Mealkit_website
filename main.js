@@ -1,11 +1,10 @@
 const express = require("express");
 const exhbs = require("express-handlebars");
 const path = require("path");
-const data = require("./data.json");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const session = require("express-session");
-
+const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -34,6 +33,10 @@ app.engine(
   exhbs({
     extname: ".hbs",
     defaultLayout: "main",
+    runtimeOptions: {
+      allowProtoPropertiesByDefault: true,
+      allowProtoMethodsByDefault: true,
+    },
   })
 );
 app.set("view engine", ".hbs");
@@ -51,6 +54,9 @@ app.use(
   })
 );
 
+// Set up express-fileupload
+app.use(fileUpload());
+
 app.use((req, res, next) => {
   res.locals.user = req.session.user;
   next();
@@ -60,10 +66,12 @@ app.use((req, res, next) => {
 const generalController = require("./controllers/general");
 const loginController = require("./controllers/login");
 const signupController = require("./controllers/signup");
+const mealController = require("./controllers/meal.js");
 
 app.use("/signup", signupController);
 app.use("/", generalController);
 app.use("/login", loginController);
+app.use("/clerkDash", mealController);
 
 const HTTP_PORT = process.env.PORT;
 
