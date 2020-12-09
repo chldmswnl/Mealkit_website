@@ -294,8 +294,15 @@ footer div i {
   padding-bottom: 10px;
   font-size: 13px;
 }
+.login_form {
+  display: flex;
+  flex-direction: column;
+}
 
 @media screen and (max-width: 480px) {
+  .contents {
+    height: 1500px;
+  }
   .valid {
     font-size: 10px;
   }
@@ -386,11 +393,14 @@ footer div i {
   .login_btn {
     width: 250px;
   }
-}
 
-.login_form {
-  display: flex;
-  flex-direction: column;
+  .nav_greeting {
+    display: none;
+  }
+
+  .western_list .list_title {
+    margin-top: 50px;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {

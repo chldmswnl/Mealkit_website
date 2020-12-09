@@ -9,6 +9,8 @@ const userSchema = new Schema({
   email: { type: String, unique: true, required: true },
   password: { type: String, required: true },
   usertype: { type: String, required: true },
+  isAdmin: { type: Boolean, default: false },
+  isUser: { type: Boolean, default: false },
 });
 
 userSchema.pre("save", function (next) {

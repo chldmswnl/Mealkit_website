@@ -41,7 +41,9 @@ router.post("/", (req, res) => {
                 if (user.usertype === "user") {
                   req.session.user = user;
                   console.log("User logged in");
-                  res.redirect("/userDash");
+                  res.render("user/userDash", {
+                    user: user,
+                  });
                 } else if (user.usertype === "admin") {
                   req.session.user = user;
                   console.log("Admin logged in");

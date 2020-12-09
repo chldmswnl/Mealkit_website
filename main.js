@@ -67,11 +67,13 @@ const generalController = require("./controllers/general");
 const loginController = require("./controllers/login");
 const signupController = require("./controllers/signup");
 const mealController = require("./controllers/meal.js");
+const cartController = require("./controllers/cart");
 
 app.use("/signup", signupController);
 app.use("/", generalController);
 app.use("/login", loginController);
 app.use("/clerkDash", mealController);
+app.use("/userDash", cartController);
 
 const HTTP_PORT = process.env.PORT;
 

@@ -1,0 +1,37 @@
+<body>
+    
+    <div class="desc_page">
+        <img src="/uploads/{{data.img}}" alt="img" class="desc_img">
+        <div class="info">
+            {{#each msg}}
+            <span class="desc_msg">{{this}}</span>
+            {{/each}}
+            <span class="desc_title">{{data.title}} - {{data.price}}</span>
+            <div class="desc_infos">
+                <div class="desc_info">
+                    <i class="far fa-clock"></i>
+                    <span>{{data.cookingTime}} min(s)</span>
+                </div>
+                <div class="desc_info">
+                    <i class="fas fa-users"></i>
+                    <span>for {{data.serving}}</span>
+                </div>
+                <div class="desc_info">
+                    <i class="fas fa-utensils"></i>
+                    <span>{{data.calroriesPerServing}} cal</span>
+                </div>
+            </div>
+            <span class="desc_desc">{{data.desc}}</span>
+            <form class="shopping_form" method="POST" action="/menu/{{data._id}}">
+                <div class="desc_quan">
+                    <label for="quan">Quantity </label>
+                    <input type="number" id="quan" name="quan" placeholder="0">
+                </div>
+                <div class="desc_btns">
+                    <input type="submit" class="desc_btn" value="Add to order">
+                    <a href="/menu" class="desc_btn_return">Return to menu page</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

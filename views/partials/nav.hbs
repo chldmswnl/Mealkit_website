@@ -8,8 +8,14 @@
         <div class="pop_ups">
             {{#if user}}
                 <span class="nav_greeting">Hello {{user.firstName}} {{user.lastName}}!</span>
-                <a href="userDash">Board</a>
-                <a href="login/logout">Logout</a>
+                {{#if user.isUser}}
+                <a href="/userDash">Board</a>
+                {{/if}}
+                    {{#if user.isAdmin}}
+                    <a href="/clerkDash">Board</a>
+                    {{/if}}
+              
+                <a href="/login/logout">Logout</a>
             {{else}}
                 <a class="login_btn" href="/login">Log In</a>
                 <a class="signup_btn" href="/signup">Sign Up</a>

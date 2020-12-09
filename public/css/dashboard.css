@@ -45,7 +45,7 @@
 }
 
 .dash .menu {
-  width: 15%;
+  width: 20%;
   background-color: #268211;
 }
 
@@ -181,7 +181,48 @@
   color: #bd0927;
   font-size: 13px;
 }
-
+@media screen and (max-width: 480px) {
+  .dash .dash_title1 {
+    font-size: 15px;
+  }
+  .dash .dash_title2 {
+    font-size: 15px;
+  }
+  .createmeal_btn {
+    margin-top: 20px;
+    width: 200px;
+    height: 35px;
+    margin-left: 80px;
+  }
+  .createMeal ul li label {
+    font-size: 11px;
+    font-weight: bold;
+    width: 150px;
+    float: left;
+    text-align: right;
+  }
+  .createMeal ul li textarea {
+    height: 100px;
+    width: 150px;
+  }
+  .meallist_title {
+    font-size: 13px;
+  }
+  .meallist_img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+  }
+  .oneMeal {
+    margin-left: 20px;
+    height: 180px;
+  }
+  .edit_img {
+    width: 150px;
+    height: 150px;
+    margin-left: 100px;
+  }
+}
 @media screen and (max-width: 720px) {
   .dash_title1 {
     color: #268211;

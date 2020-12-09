@@ -1,0 +1,43 @@
+<body>
+    <div class="cart">
+        <span class="cart_title">Shopping Cart</span>
+        {{#each msg}}
+        <span class="desc_msg">{{this}}</span>
+        {{/each}}
+        <table class="cart_table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data}}
+                <tr>
+                    <th><img src="/uploads/{{img}}" alt="img" class="cart_img"></th>
+                    <th >{{title}}</th>
+                    <th >{{quantity}}</th>
+                    <th>${{price}}</th>
+                    <th>${{getTotal price quantity}}</th>
+                </tr>
+                {{/each}}
+                
+            </tbody>
+        </table>
+            
+               
+                <div class="cart_total">
+                    <div>
+                        <span >Total Quantity: {{total_quan}}</span><br>
+                        <span >Total Price: ${{total_price}}</span>
+                    </div>
+                </div>
+                <form class="cart_form" method="POST" action="/UserDash/cart">
+                    <input type="submit" class="cart_btn" value="Place your order">
+                </form>
+        </div>
+    </div>
+</body>

@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const data = require("../data");
 const User = require("../models/user");
 
 function validateEmail(email) {
@@ -22,13 +21,20 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
   const { firstName, lastName, email, password, usertype } = req.body;
-  const user = new User({
+  let user = new User({
     firstName: firstName,
     lastName: lastName,
     email: email,
     password: password,
     usertype: usertype,
   });
+
+  if (usertype === "admin") {
+    user.isAdmin = true;
+  } else if (usertype === "user") {
+    user.isUser = true;
+  }
+
   const message = `Welcome ${firstName} !! We're glad to meet you! `;
   const message1 = `Welcome ${firstName} !`;
   let validation = {};

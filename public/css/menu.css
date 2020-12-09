@@ -1,0 +1,133 @@
+.desc_page {
+  display: flex;
+  margin: 70px 0;
+  justify-content: center;
+}
+
+.desc_img {
+  width: 400px;
+  height: 400px;
+  margin-right: 100px;
+}
+
+.desc_page .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.desc_title {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 30px;
+  color: #363535;
+}
+
+.desc_infos {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.desc_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.desc_info i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #52504e;
+}
+
+.desc_info span {
+  font-weight: bold;
+  font-size: 13px;
+  color: #52504e;
+}
+
+.desc_desc {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.desc_btns {
+  display: flex;
+  flex-direction: row;
+}
+
+.desc_btn_return {
+  text-decoration: none;
+  padding: 20px 15px;
+  background-color: #694211;
+  color: white;
+  margin-right: 15px;
+  border-radius: 3px;
+  border: none;
+  font-weight: bold;
+}
+
+.desc_btn {
+  padding: 20px 15px;
+  background-color: #694211;
+  color: white;
+  margin-right: 15px;
+  border-radius: 3px;
+  border: none;
+  font-weight: bold;
+}
+
+.desc_btns input {
+  font-size: 16px;
+  cursor: pointer;
+}
+.desc_quan {
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+.desc_quan label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.desc_msg {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #cc1204;
+}
+
+@media screen and (max-width: 480px) {
+  .desc_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .desc_img {
+    width: 250px;
+    height: 250px;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  .desc_btn_return {
+    display: none;
+  }
+  .desc_btn {
+    margin-left: 80px;
+    margin-top: 30px;
+  }
+  .desc_title {
+    font-size: 20px;
+  }
+  .desc_info i {
+    font-size: 30px;
+  }
+  .desc_desc {
+    font-size: 11px;
+  }
+}
